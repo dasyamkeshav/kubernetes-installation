@@ -51,3 +51,19 @@ ip-172-31-29-161.ec2.internal ansible_user=ubuntu os_type="Ubuntu"
 ip-172-31-20-9.ec2.internal ansible_user=ubuntu  os_type="Ubuntu"
 ```
 
+### Configuting master node and installing neccessary pre configurations
+```
+ansible-playbook settingup_kubernetes_cluster.yml
+
+```
+
+### Joining worker nodes to the cluster
+
+```
+ansible-playbook join_kubernetes_workers_nodes.yml
+
+```
+
+# Delete the cluster
+```
+ansible-playbook clear_k8s_setup.yml
